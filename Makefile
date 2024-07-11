@@ -1,49 +1,38 @@
-# CC specifies the compiler to be used
-CC = gcc
+# compiler to use
+CC=gcc
 
-# SRC specifies the .c files
-SRC = src/main.c src/window.c src/raycaster.c src/SDL_subfunctions.c \
-	src/colors.c src/angles.c src/color_arithmetic.c src/map.c \
-	src/color_operations.c src/draw_all_things.c src/draw_to_screen.c \
-	src/window_status.c
+# Flags to create object files with
+CFLAGS=-g -Wall -Werror -Wextra -pedantic
+# Flags to link the SDL2 library
+SDL_FLAGS=-I/usr/local/include/SDL2 -L/usr/lib/x86_64-linux-gnu -lSDL2 -lm
 
-# OBJ specifies the .o files
-OBJ = $(SRC:.c=.o)
+# All C program files
+SRC=./src/create_maze.c ./src/create_world.c ./src/dist_checks.c ./src/draw.c ./src/event_handlers.c ./src/free_stuff.c ./src/init_instance.c ./src/main_maze.c ./src/movement.c ./src/win.c
+# The names of all object files
+OBJ=$(SRC:.c=.o)
+# Executable name
+NAME=maze
 
-# NAME specifies the name of our exectuable
-NAME = 'The Maze Project'
+# Removal command
+RM=rm
 
-# RM specifies the program to delete files
-RM = rm -f
+# Compile all files into the executable
+# CFLAGS will only be used when creating object files
+# SDL_FLAGS includes necessary libraries to link
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME) $(SDL_FLAGS)
 
-# SDL2 runs the sdl2-config program with the necessary flags
-SDL2 := $$(sdl2-config --cflags --libs)
-
-# CFLAGS specifies your favorite compiler flags
-CFLAGS = -Wall -Werror -Wextra -pedantic
-
-# LFLAGS specifies the linker flags
-# LFLAGS =
-
-# Makefile should work even if there is a file in the folder
-# that has the same name as rule
-.PHONY: all clean oclean fclean re
-
-# This rule builds our executable
-# Makefile should not compile if the header file main.h is missing
-all: include/main.h $(OBJ)
-	$(CC) $(OBJ) $(CFLAGS) $(SDL2) -o $(NAME)
-
-# This rule deletes all Emacs and Vim temporary files along with the executable
+# Remove all Emacs temp files (~)
 clean:
-	$(RM) *~ $(NAME)
+	$(RM) -f *~
 
-# This rule deletes the object files
+# Remove all object files (.o)
 oclean:
-	$(RM) $(OBJ)
+	$(RM) -f $(OBJ)
 
-# This rule deletes all Emacs and Vim temporary files, the executable, and the object files
+# Remove temp files, object files, and executable
 fclean: clean oclean
+	$(RM) -f $(NAME)
 
-# This rule forces recompilation of all source files
+# Run full clean and recompile all files
 re: fclean all
