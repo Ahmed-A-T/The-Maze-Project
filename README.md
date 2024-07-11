@@ -86,38 +86,15 @@ In the image above the player starts 2 spaces in from the top left corner, and t
 ## Flowchart
 ![The Maze Flow Chart](https://i.imgur.com/t0MxNni.png)
 
-## Reference
-- [lazyfoo](http://lazyfoo.net/tutorials/SDL/index.php#Event%20Driven%20Programming)
-- [geeksforgeeks](https://www.geeksforgeeks.org/structure-vs-class-in-cpp/)
-- [permadi.com](https://permadi.com/1996/05/ray-casting-tutorial-1/)
-- [lodev.org](https://lodev.org/cgtutor/raycasting.html)
-- [cplusplus.com](https://cplusplus.com/forum/beginner/214311/)
-- [pikuma.com](https://pikuma.com/courses/raycasting-engine-tutorial-algorithm-javascript)
-- [3DSage/OpenGL-Raycaster](https://www.youtube.com/watch?v=gYRrGTC7GtA)
-
-## Demo
-[![The Maze Demo](https://github.com/elyse502/The-Maze/assets/125453474/f06c5ca5-5463-4e6c-8bb7-ab34f0a00fa5)](https://youtu.be/MLKPI4e5RTE)
 
 <details><summary align="center"> </samp></summary><p align ="center"> Click on The PICTURE☝️</p></details>
 
 <p align="center">
 <b align="center">📍This project is still a work in progress more detail on the project will be available in the future🍿📺🍿</b>
 
-## Author :black_nib:
-1. _[NIYIBIZI Elysée](https://linktr.ee/niyibizi_elysee) | [Github](https://github.com/elyse502) | [Linkedin](https://www.linkedin.com/in/niyibizi-elys%C3%A9e/) | [Twitter](https://twitter.com/Niyibizi_Elyse)._
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-# Acknowledgements 🙏
-All work contained in this project was completed as part of the curriculum for _Alx-Africa_. _Alx-Africa_ is a remote-based full-stack software engineering program that prepares students for careers in the tech industry using project-based peer learning. For more information, visit this [link](https://www.alxafrica.com/).
-* **ALX staff**: For the help, advice, and resources throughout the project and curriculum.
-* **Cohort 13 and all ALX students**: For friendship, support, and insights over the last year.
-* **YOU**: For reading this documentation and testing out The Game. I hope you enjoyed the ride!
-
-## Support🎉
-If you like how I present and document my work do me a favor of giving a Star ✨ to my [Repos](https://github.com/elyse502?tab=repositories) |&&| a [Follow](https://github.com/elyse502) 👥
 
 <p align="center">
 <h2 align="center"><img align="center" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/ab3c1e01-2b98-47ae-96b7-37c07c85a2f1" alt="footer" width="150"  height="150"/></h2>
